@@ -1,0 +1,34 @@
+Funcionales:
+- Mostrar animacion detenida (resorte)   ---- CHEACK
+- Ecuaciones con capacidad de copiarse ---- CHEACK
+- Modulo de Rigidez de materiales  ----- RESOLVER LO DEL MODULO DE RIGIDEZ
+
+CKEACK CHEACK
+
+ESTILO:
+*** CAPACIDAD para celulares
+
+
+
+(Aluminio, 4 GPa)
+(Cobre de Berilio, 6.9 GPa)
+(Laton, 5.8 GPa)
+(Bronce. 6.5GPa)
+(Acero Carbono, 11.2 GPa)
+(Hierro Fundido, 5.9 GPa)
+(Cobre, 6.5Gpa)
+()
+
+(Aleaciones de Alumnio, 3.9 GPa)
+(Acero carbono, 11.2 GPa)
+(Acero al níquel, 11.0 GPa)
+(Acero estructural, 11.5 GPa)
+(Acero inoxidable, 11.2 GPa)
+(Acero fundido, 11.3 GPa)
+(Acero laminado en frío, 10.9 GPa)
+(Inconel, 11.5 GPa)
+(Cobre de berilio, 6.9 GPa)
+(Bronce, 6.5 GPa)
+(Latón, 5.8 GPa)
+(Aluminio, 4.0 GPa)
+(Titanio, 5.9 GPa)

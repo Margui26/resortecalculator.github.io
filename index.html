@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constante del Resorte</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header class="head_page">
+        <h1 class="title_page">Constante de un resorte </h1>
+        <img src="assets/img/utb-logotipo_page_mini.png" id="logo_utb" alt="Logotipo de la UTB">
+    </header>
+
+    <main class="container_main">
+        <canvas id="scene" class="scene" width="200" height="380"></canvas>
+        <div id="options" class="box_options">
+            <h1 class="title_box">Ley de Hooke</h1>
+            <div class="equation">
+                $$ k = \dfrac{m \cdot g}{x}$$
+            </div>
+
+            <label>
+                Masa [m][g]:
+                <input type="number" name="masa" id="mass">
+            </label>
+            <label>
+                Elongación [x][m]:
+                <input type="number" name="elongacion" id="dl">
+            </label>
+
+
+            <button class="btn_calc" id="btn_calc">
+                Calcular Constante
+            </button>
+
+
+        </div>
+        <div class="box_options box_options_ecuation">
+            <h1 class="title_box">Constante por parametros Geometricos</h1>
+            <div class="equation">
+                $$ k = \dfrac{G\cdot d^4}{8 \cdot D^3 \cdot N}$$
+            </div>
+            <label>
+                Modulo de Rigidez [G][Pa]:
+                <select name="moduloRigidez" id="modRigidez">
+                    <option value="39000000000">Aleaciones de Aluminio [3.9 GPa]</option>
+                    <option value="11200000000">Acero carbono [11.2 GPa]</option>
+                    <option value="11000000000">Acero al níquel [11.0 GPa]</option>
+                    <option value="11500000000">Acero estructural [11.5 GPa]</option>
+                    <option value="11200000000">Acero inoxidable [11.2 GPa]</option>
+                    <option value="11300000000">Acero fundido [11.3 GPa]</option>
+                    <option value="10900000000">Acero laminado en frío [10.9 GPa]</option>
+                    <option value="11500000000">Inconel [11.5 GPa]</option>
+                    <option value="6900000000">Cobre de berilio [6.9 GPa]</option>
+                    <option value="6500000000">Bronce [6.5 GPa]</option>
+                    <option value="5800000000">Latón [5.8 GPa]</option>
+                    <option value="4000000000">Aluminio [4.0 GPa]</option>
+                    <option value="5900000000">Titanio [5.9 GPa]</option>
+                    <option value="otro">Otro (escriba el valor en GPa)</option>
+                </select>
+                <input type="text" id="valorPersonalizado" name="valorPersonalizado"
+                    placeholder="Ingrese un valor en GPa" style="display: none;" />
+
+            </label>
+
+
+
+
+            <label>
+                Diametro del Alambre [d][m]:
+                <input type="number" name="diaAlambre" id="diametroAla">
+            </label>
+            <label>
+                Diametro de Espiral [D][m]:
+                <input type="number" name="diaEspiral" id="diametroEspi">
+            </label>
+            <label>
+                Numero de Espirales [N]:
+                <input type="number" name="numEspiral" id="numeroEspi">
+            </label>
+            <button class="btn_calc" id="btn_calc_geo">
+                Calcular Constante
+            </button>
+        </div>
+
+    </main>
+    <div class="result" id="result">Digite los valores para poder calcular la constante de su resorte.</div>
+    <script src="logic.js"></script>
+</body>
+
+</html>
