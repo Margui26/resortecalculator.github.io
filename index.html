@@ -43,9 +43,34 @@
         <canvas id="scene" class="scene" width="200" height="380"></canvas>
         <div id="options" class="box_options">
             <h1 class="title_box">Ley de Hooke</h1>
-            <div class="equation">
-                $$ k = \dfrac{m \cdot g}{x}$$
+            <p class="info_hooke">
+                * Para un sistema masa-resorte en reposo, utilizando sumatorias de fuerzas y la ley de Hooke podemos
+                encontrar una
+                expresión para la constante del resorte: <span class="hooke_equation">
+                    F<sub>resorte</sub>= -ΔxK
+                </span>
+            </p>
+            <div class="container_equation_1">
+                <div class="proce_hoo">
+                    <div>
+                        $$ \sum F = 0 \rightarrow
+                        $$
+                    </div>
+                    <div>
+                        $$ F_{resorte} - F_{peso} = 0 \rightarrow
+                        $$
+                    </div>
+                    <div>
+                        $$k \cdot x = m \cdot g
+                        $$
+                    </div>
+                </div>
+
+                <div class="equation equation_box_2">
+                    $$ k = \dfrac{m \cdot g}{x}$$
+                </div>
             </div>
+
 
             <label>
                 Masa [m][g]:
@@ -63,56 +88,70 @@
 
 
         </div>
-        <div class="box_options box_options_ecuation">
-            <h1 class="title_box">Constante por parametros Geometricos</h1>
-            <div class="equation">
-                $$ k = \dfrac{G\cdot d^4}{8 \cdot D^3 \cdot N}$$
+        <div class="box_box_container">
+            <div class="box_options box_options_ecuation">
+
+                <h1 class="title_box title_box_geo">Calculo de constante por geometría de resortes helicoidales</h1>
+                <div class="equation">
+                    $$ k = \dfrac{G\cdot d^4}{8 \cdot D^3 \cdot N}$$
+                </div>
+                <label>
+                    Modulo de Rigidez [G][Pa]:
+                    <select name="moduloRigidez" id="modRigidez">
+                        <option value="39000000000">Aleaciones de Aluminio [3.9 GPa]</option>
+                        <option value="11200000000">Acero carbono [11.2 GPa]</option>
+                        <option value="11000000000">Acero al níquel [11.0 GPa]</option>
+                        <option value="11500000000">Acero estructural [11.5 GPa]</option>
+                        <option value="11200000000">Acero inoxidable [11.2 GPa]</option>
+                        <option value="11300000000">Acero fundido [11.3 GPa]</option>
+                        <option value="10900000000">Acero laminado en frío [10.9 GPa]</option>
+                        <option value="11500000000">Inconel [11.5 GPa]</option>
+                        <option value="6900000000">Cobre de berilio [6.9 GPa]</option>
+                        <option value="6500000000">Bronce [6.5 GPa]</option>
+                        <option value="5800000000">Latón [5.8 GPa]</option>
+                        <option value="4000000000">Aluminio [4.0 GPa]</option>
+                        <option value="5900000000">Titanio [5.9 GPa]</option>
+                        <option value="otro">Otro (escriba el valor en GPa)</option>
+                    </select>
+                    <input type="text" id="valorPersonalizado" name="valorPersonalizado"
+                        placeholder="Ingrese un valor en GPa" style="display: none;" />
+
+                </label>
+
+
+
+
+                <label>
+                    Diametro del Alambre [d][m]:
+                    <input type="number" name="diaAlambre" id="diametroAla">
+                </label>
+                <label>
+                    Diametro de Espiral [D][m]:
+                    <input type="number" name="diaEspiral" id="diametroEspi">
+                </label>
+                <label>
+                    Numero de Espirales [N]:
+                    <input type="number" name="numEspiral" id="numeroEspi">
+                </label>
+                <button class="btn_calc" id="btn_calc_geo">
+                    Calcular Constante
+                </button>
             </div>
-            <label>
-                Modulo de Rigidez [G][Pa]:
-                <select name="moduloRigidez" id="modRigidez">
-                    <option value="39000000000">Aleaciones de Aluminio [3.9 GPa]</option>
-                    <option value="11200000000">Acero carbono [11.2 GPa]</option>
-                    <option value="11000000000">Acero al níquel [11.0 GPa]</option>
-                    <option value="11500000000">Acero estructural [11.5 GPa]</option>
-                    <option value="11200000000">Acero inoxidable [11.2 GPa]</option>
-                    <option value="11300000000">Acero fundido [11.3 GPa]</option>
-                    <option value="10900000000">Acero laminado en frío [10.9 GPa]</option>
-                    <option value="11500000000">Inconel [11.5 GPa]</option>
-                    <option value="6900000000">Cobre de berilio [6.9 GPa]</option>
-                    <option value="6500000000">Bronce [6.5 GPa]</option>
-                    <option value="5800000000">Latón [5.8 GPa]</option>
-                    <option value="4000000000">Aluminio [4.0 GPa]</option>
-                    <option value="5900000000">Titanio [5.9 GPa]</option>
-                    <option value="otro">Otro (escriba el valor en GPa)</option>
-                </select>
-                <input type="text" id="valorPersonalizado" name="valorPersonalizado"
-                    placeholder="Ingrese un valor en GPa" style="display: none;" />
 
-            </label>
-
-
-
-
-            <label>
-                Diametro del Alambre [d][m]:
-                <input type="number" name="diaAlambre" id="diametroAla">
-            </label>
-            <label>
-                Diametro de Espiral [D][m]:
-                <input type="number" name="diaEspiral" id="diametroEspi">
-            </label>
-            <label>
-                Numero de Espirales [N]:
-                <input type="number" name="numEspiral" id="numeroEspi">
-            </label>
-            <button class="btn_calc" id="btn_calc_geo">
-                Calcular Constante
-            </button>
+            <img src="assets/img/image_1.png" id="image_resort">
         </div>
+
+
 
     </main>
     <div class="result" id="result">Digite los valores para poder calcular la constante de su resorte.</div>
+
+
+    <div class="main_lab">
+        <h1 class="title_box"> Laboratorio - Constante de Resorte </h1>
+        <canvas width="800px" height="500px" id="canvas_lab"></canvas>
+    </div>
+
     <script src="logic.js"></script>
 </body>
 

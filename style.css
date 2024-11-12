@@ -31,7 +31,7 @@ body {
 .container_main {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .box_options {
@@ -39,9 +39,10 @@ body {
   padding: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid black;
-  width: 320px;
+  width: 300px;
   position: relative;
 }
+
 .box_options {
   width: 440px;
   height: 380px;
@@ -74,6 +75,19 @@ label {
   left: calc(50% - 64.335px);
   padding: 4px 8px;
 }
+.info_hooke {
+  font-size: 15px;
+  margin-top: 9px;
+}
+.proce_hoo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.title_box_geo {
+  font-size: 22px;
+}
 .head_page {
   display: flex;
   padding: 4px 14px;
@@ -91,6 +105,39 @@ label {
 
   margin-right: 10px;
 }
+.box_box_container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border: 1px solid black;
+}
+#image_resort {
+  width: 250px;
+}
+.box_options_ecuation {
+  width: 380px;
+  border: none;
+  box-shadow: none;
+}
+.equation_box_2 {
+  margin-top: 0px;
+}
+.container_equation_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.hooke_equation {
+  font-weight: 500;
+}
+.main_lab {
+  background-color: #fff;
+  width: 800px;
+
+  border: 1px solid black;
+}
+
 @media (max-width: 930px) {
   .container_main {
     flex-direction: column-reverse;
