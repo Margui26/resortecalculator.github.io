@@ -14,6 +14,8 @@ const $numeroEspiras = document.getElementById("numeroEspi");
 const $btnGeo = document.querySelector("#btn_calc_geo");
 
 const $resOn = document.querySelector("#result");
+const $resulH = document.querySelector("#result_h");
+const $resulG = document.querySelector("#result_g");
 const GRAVITY = 9.8; // Constante de gravedad (m/s^2)
 const scale = 100; // Escala para convertir metros a píxeles
 
@@ -53,7 +55,7 @@ function calcHooke() {
 
   // Validaciones
   if (isNaN(mass) || isNaN(dx) || mass <= 0 || dx <= 0) {
-    $resOn.innerHTML =
+    $resulH.innerHTML =
       "Por favor, ingresa valores válidos para la masa y la deformación.";
     return;
   }
@@ -76,13 +78,13 @@ function calcHooke() {
     displacement = maxDisplacement;
     dxValue = displacement / scale; // Ajustar dxValue para la animación
     // Mantener dxValueF como el valor real ingresado por el usuario
-    $resOn.innerHTML = `La constante del resorte (Ley de Hooke) es: k = ${k.toFixed(
+    $resulH.innerHTML = `La constante del resorte (Ley de Hooke) es: k = ${k.toFixed(
       2
-    )} N/m.<br>Nota: La deformación ingresada es demasiado grande para ser mostrada completamente en la animación. Se ha limitado la deformación en la animación.`;
+    )} N/m.<span class="nota"><br>Nota: La deformación ingresada es demasiado grande para ser mostrada completamente en la animación.</span>`;
   } else {
     dxValue = dxValueF; // Usar la deformación real si no se excede el máximo
     // Mostrar resultado
-    $resOn.innerHTML = `La constante del resorte (Ley de Hooke) es: k = ${k.toFixed(
+    $resulH.innerHTML = `La constante del resorte (Ley de Hooke) es: k = ${k.toFixed(
       2
     )} N/m.`;
   }
@@ -117,7 +119,7 @@ function calcGeo() {
     D <= 0 ||
     N <= 0
   ) {
-    $resOn.innerHTML =
+    $resulG.innerHTML =
       "Por favor, ingresa valores válidos para todos los parámetros geométricos.";
     return;
   }
@@ -126,7 +128,7 @@ function calcGeo() {
   const k = (G * Math.pow(d, 4)) / (8 * Math.pow(D, 3) * N);
 
   // Mostrar resultado
-  $resOn.innerHTML = `La constante del resorte (Fórmula geométrica) es: k = ${k.toFixed(
+  $resulG.innerHTML = `La constante del resorte (Fórmula geométrica) es: k = ${k.toFixed(
     2
   )} N/m.`;
 

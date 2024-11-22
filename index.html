@@ -40,7 +40,7 @@
     </header>
 
     <main class="container_main">
-        <canvas id="scene" class="scene" width="200" height="380"></canvas>
+        <canvas id="scene" class="scene" width="200" height="440"></canvas>
         <div id="options" class="box_options">
             <h1 class="title_box">Ley de Hooke</h1>
             <p class="info_hooke">
@@ -81,6 +81,8 @@
                 <input type="number" name="elongacion" id="dl">
             </label>
 
+            <div class="resultado_drch" id="result_h">Digite los valores para poder calcular la constante de su resorte.
+            </div>
 
             <button class="btn_calc" id="btn_calc">
                 Calcular Constante
@@ -122,7 +124,7 @@
 
 
                 <label>
-                    Diametro del Alambre [d][m]:
+                    Espesor del Alambre [d][m]:
                     <input type="number" name="diaAlambre" id="diametroAla">
                 </label>
                 <label>
@@ -133,6 +135,8 @@
                     Numero de Espirales [N]:
                     <input type="number" name="numEspiral" id="numeroEspi">
                 </label>
+                <div class="resultado_drch" id="result_g">Digite los valores para poder calcular la constante de su
+                    resorte.</div>
                 <button class="btn_calc" id="btn_calc_geo">
                     Calcular Constante
                 </button>
@@ -146,10 +150,12 @@
     </main>
     <div class="result" id="result">Digite los valores para poder calcular la constante de su resorte.</div>
 
+    <div class="center">
 
-    <div class="main_lab">
-        <h1 class="title_box"> Laboratorio - Constante de Resorte </h1>
-        <canvas width="800px" height="500px" id="canvas_lab"></canvas>
+        <div class="main_lab">
+            <h1 class="title_box"> Laboratorio - Constante de Resorte </h1>
+            <canvas width="800px" height="500px" id="canvas_lab"></canvas>
+        </div>
     </div>
 
     <script src="logic.js"></script>
