@@ -77,7 +77,7 @@ function calcHooke() {
     displacement = maxDisplacement;
     dxValue = displacement / scale; // Ajustar dxValue para la animación
     // Mantener dxValueF como el valor real ingresado por el usuario
-    $resulH.innerHTML = `La constante del resorte (Ley de Hooke) es: k = ${k.toFixed(
+    $resulH.innerHTML = `La constante del resorte es: k = ${k.toFixed(
       2
     )} N/m.<span class="nota"><br>Nota: La deformación ingresada es demasiado grande para ser mostrada completamente en la animación.</span>`;
   } else {
@@ -127,9 +127,7 @@ function calcGeo() {
   const k = (G * Math.pow(d, 4)) / (8 * Math.pow(D, 3) * N);
 
   // Mostrar resultado
-  $resulG.innerHTML = `La constante del resorte (Fórmula geométrica) es: k = ${k.toFixed(
-    2
-  )} N/m.`;
+  $resulG.innerHTML = `La constante del resorte es: k = ${k.toFixed(2)} N/m.`;
 
   // Reiniciar posición de la masa y detener animación anterior
   massPosY = springRestPos;
