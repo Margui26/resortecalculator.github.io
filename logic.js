@@ -13,7 +13,6 @@ const $numeroEspiras = document.getElementById("numeroEspi");
 // BOTÓN PARA CONSTANTE POR GEOMÉTRICA DE RESORTE
 const $btnGeo = document.querySelector("#btn_calc_geo");
 
-const $resOn = document.querySelector("#result");
 const $resulH = document.querySelector("#result_h");
 const $resulG = document.querySelector("#result_g");
 const GRAVITY = 9.8; // Constante de gravedad (m/s^2)
